@@ -19,6 +19,27 @@
     --parchment-border: #c8bca8;
 }
 
+/* Vizminds 2.0 - Round 2 Stylesheet
+  Theme: Game of Thrones / High Contrast
+*/
+
+/* CSS Custom Properties for Theming */
+:root {
+    --primary-font: 'Cinzel', serif;
+    --secondary-font: 'IM Fell English SC', serif;
+    --text-color-light: #f0e6d2; /* Parchment color */
+    --text-color-dark: #3b2f2f;
+    /* NEW: AMOLED Black background */
+    --background-dark: #000000;
+    --background-medium: #000000;
+    /* NEW: Game of Thrones House Colors */
+    --fire-color: #9B111E; /* Targaryen/Lannister Crimson */
+    --ice-color: #AEEEEE; /* Stark/White Walker Pale Blue */
+    --gold-accent: #DAA520; /* Lannister/Baratheon Gold */
+    --parchment-bg: #f0e6d2;
+    --parchment-border: #c8bca8;
+}
+
 /* General Body and Reset Styles */
 * {
     margin: 0;
@@ -39,8 +60,12 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 
@@ -64,7 +89,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.9) 100%); /* Stronger vignette */
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.9) 100%);
+    /* Stronger vignette */
 }
 
 .epic-background {
@@ -110,21 +136,6 @@ body {
 .fire-particle:nth-child(13) { left: 65%; animation-duration: 12s; animation-delay: 1.5s; width: 6px; height: 6px; }
 .fire-particle:nth-child(14) { left: 85%; animation-duration: 9s; animation-delay: 5.5s; width: 4px; height: 4px; }
 .fire-particle:nth-child(15) { left: 95%; animation-duration: 13s; animation-delay: 0.5s; width: 5px; height: 5px; }
-.fire-particle:nth-child(1) { left: 10%; animation-duration: 12s; animation-delay: 1s; width: 4px; height: 4px; }
-.fire-particle:nth-child(2) { left: 20%; animation-duration: 8s; animation-delay: 3s; width: 6px; height: 6px; }
-.fire-particle:nth-child(3) { left: 30%; animation-duration: 15s; animation-delay: 0s; width: 3px; height: 3px; }
-.fire-particle:nth-child(4) { left: 40%; animation-duration: 10s; animation-delay: 5s; width: 5px; height: 5px; }
-.fire-particle:nth-child(5) { left: 50%; animation-duration: 9s; animation-delay: 2s; width: 4px; height: 4px; }
-.fire-particle:nth-child(6) { left: 60%; animation-duration: 13s; animation-delay: 4s; width: 3px; height: 3px; }
-.fire-particle:nth-child(7) { left: 70%; animation-duration: 7s; animation-delay: 1s; width: 6px; height: 6px; }
-.fire-particle:nth-child(8) { left: 80%; animation-duration: 11s; animation-delay: 6s; width: 5px; height: 5px; }
-.fire-particle:nth-child(9) { left: 90%; animation-duration: 14s; animation-delay: 2.5s; width: 3px; height: 3px; }
-.fire-particle:nth-child(10) { left: 5%; animation-duration: 10s; animation-delay: 7s; width: 4px; height: 4px; }
-.fire-particle:nth-child(11) { left: 25%; animation-duration: 16s; animation-delay: 3.5s; width: 5px; height: 5px; }
-.fire-particle:nth-child(12) { left: 45%; animation-duration: 8s; animation-delay: 8s; width: 3px; height: 3px; }
-.fire-particle:nth-child(13) { left: 65%; animation-duration: 12s; animation-delay: 1.5s; width: 6px; height: 6px; }
-.fire-particle:nth-child(14) { left: 85%; animation-duration: 9s; animation-delay: 5.5s; width: 4px; height: 4px; }
-.fire-particle:nth-child(15) { left: 95%; animation-duration: 13s; animation-delay: 0.5s; width: 5px; height: 5px; }
 
 .hero-content {
     position: relative;
@@ -143,13 +154,16 @@ body {
 }
 
 @keyframes titlePulse {
-    50% { text-shadow: 0 0 20px var(--fire-color); }
+    50% {
+        text-shadow: 0 0 20px var(--fire-color);
+    }
 }
 
 .event-subtitle {
     font-family: var(--primary-font);
     font-size: clamp(0.8rem, 4vw, 2.5rem);
-    color: var(--gold-accent); /* Changed to gold for better contrast */
+    color: var(--gold-accent);
+    /* Changed to gold for better contrast */
     text-shadow: 0 0 15px var(--fire-color);
     letter-spacing: 1.5px;
     animation: titlePulse 4s infinite ease-in-out;
@@ -170,7 +184,6 @@ body {
     width: 100%;
     z-index: 1000;
     transition: background-color 0.3s ease-in-out;
-
     font-size: 2.0rem; /* 👈 added font size */
 }
 
@@ -240,7 +253,8 @@ main {
     background-image: linear-gradient(to right, transparent, var(--gold-accent), transparent);
 }
 
-.problem-section, .content-section {
+.problem-section,
+.content-section {
     padding: 4rem 0;
     border-bottom: 1px solid #222;
 }
@@ -269,7 +283,7 @@ main {
     padding: 2rem;
     border: 2px solid var(--parchment-border);
     border-radius: 3px; /* Sharper edges */
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -344,134 +358,213 @@ main {
         grid-template-columns: 1fr;
     }
 }
+
 .glow-btn {
-  background: #DAA520;             /* brown background */
-  border: none;                  /* no border */
-  color: white;                  /* text color */
-  font-size: 18px;               /* font size */
-  font-weight: bold;             /* bold text */
-  cursor: pointer;               /* pointer on hover */
-  padding: 12px 24px;            /* spacing */
-  border-radius: 10px;           /* rounded corners */
-  transition: box-shadow 0.3s ease, text-shadow 0.3s ease;
+    background: #DAA520; /* brown background */
+    border: none; /* no border */
+    color: white; /* text color */
+    font-size: 18px; /* font size */
+    font-weight: bold; /* bold text */
+    cursor: pointer; /* pointer on hover */
+    padding: 12px 24px; /* spacing */
+    border-radius: 10px; /* rounded corners */
+    transition: box-shadow 0.3s ease, text-shadow 0.3s ease;
 }
 
 .glow-btn:hover {
-  box-shadow: 0 0 20px 5px #DAA520;  /* red glow around button */
-  text-shadow: 0 0 8px #DAA520;      /* glowing text */
+    box-shadow: 0 0 20px 5px #DAA520; /* red glow around button */
+    text-shadow: 0 0 8px #DAA520; /* glowing text */
 }
+
+/* --- The Great Scroll of Rules --- */
+
+/* Keyframe Animations */
+@keyframes scrollReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes titleFlicker {
+    0%,
+    100% {
+        text-shadow: 0 0 10px var(--gold-accent), 0 0 20px var(--fire-color);
+    }
+    50% {
+        text-shadow: 0 0 15px var(--gold-accent), 0 0 30px var(--fire-color), 0 0 5px #fff;
+    }
+}
+
+
+/* The Scroll Container */
 .rules-scroll {
-  background: #000; /* dark black background */
-  border: 3px solid #d4af37; /* golden border */
-  border-radius: 12px;
-  padding: 20px;
-  max-height: 250px; /* scrollable if long */
-  overflow-y: auto;
-  font-family: "Cinzel", serif; /* medieval/GOT-like font */
-  color: #f5f5dc; /* parchment-like text */
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.7); /* golden glow */
+    background-color: rgba(10, 5, 5, 0.8);
+    background-image: url('https://www.transparenttextures.com/patterns/old-parchment.png');
+    background-blend-mode: multiply;
+    border: 3px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to bottom, #DAA520, #b8860b, #DAA520);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 8px;
+    padding: 2.5rem;
+    color: var(--text-color-light);
+    font-family: var(--secondary-font);
+    /* Sizing and Positioning */
+    margin: 3rem auto;
+    width: 90%;
+    max-width: 800px;
+    max-height: 70vh;
+    overflow-y: auto;
+    /* Aesthetics */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7), 0 0 20px var(--gold-accent) inset;
+    animation: scrollReveal 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+/* Custom Scrollbar */
+.rules-scroll::-webkit-scrollbar {
+    width: 10px;
+}
+
+.rules-scroll::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.rules-scroll::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to bottom, #ffd700, #DAA520);
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.rules-scroll::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(to bottom, #fff, #ffd700);
+}
+
+.rules-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #DAA520 rgba(0, 0, 0, 0.5);
+}
+
+/* The Title of the Scroll */
 .rules-title {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 15px;
-  color: #ffd700; /* bright gold for title */
-  text-shadow: 0 0 8px #d4af37, 0 0 15px #000; /* glow + shadow */
-}
-.auth-button {
-  background: #DAA520;             /* brown background */
-  border: none;                  /* no border */
-  color: white;                  /* text color */
-  font-size: 18px;               /* font size */
-  font-weight: bold;             /* bold text */
-  cursor: pointer;               /* pointer on hover */
-  padding: 12px 24px;            /* spacing */
-  border-radius: 10px;           /* rounded corners */
-  transition: box-shadow 0.3s ease, text-shadow 0.3s ease;
+    font-family: var(--primary-font);
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--gold-accent);
+    animation: titleFlicker 3s infinite alternate;
+    position: relative;
 }
 
+/* Decorative lines for the title */
+.rules-title::before,
+.rules-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 25%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-accent), transparent);
+}
+
+.rules-title::before {
+    left: 0;
+}
+
+.rules-title::after {
+    right: 0;
+}
+
+/* Styling for content within the scroll */
+.rules-scroll p {
+    font-size: 1.0rem;
+    line-height: 1.4;
+    text-shadow: 1px 1px 2px #000;
+    margin-bottom: 1rem;
+}
+
+.rules-scroll hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(218, 165, 32, 0, 0), rgba(218, 165, 32, 0.75), rgba(218, 165, 32, 0, 0));
+    margin: 2rem 0;
+}
 
 .auth-button {
-  background: #8B4513;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;        /* text inside button centered */
+    background: #DAA520;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease, text-shadow 0.3s ease;
+    text-align: center;
 }
 
 .auth-button:hover {
-  box-shadow: 0 0 20px 5px #DAA520;  /* gold glow */
-  text-shadow: 0 0 8px #DAA520;
+    box-shadow: 0 0 20px 5px #DAA520; /* gold glow */
+    text-shadow: 0 0 8px #DAA520;
 }
 
 .password-input {
-  background: #111;
-  border: 2px solid #DAA520;
-  color: white;
-  font-size: 16px;
-  padding: 12px 20px;
-  border-radius: 10px;
-  outline: none;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
-  text-align: center;        /* text inside input centered */
+    background: #111;
+    border: 2px solid #DAA520;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    outline: none;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    text-align: center;
 }
 
 .password-input::placeholder {
-  color: #aaa;
-  font-style: italic;
-  text-align: center;        /* placeholder centered */
+    color: #aaa;
+    font-style: italic;
+    text-align: center;
 }
 
 .password-input:focus {
-  border-color: #DAA520;
-  box-shadow: 0 0 10px #DAA520;
+    border-color: #DAA520;
+    box-shadow: 0 0 10px #DAA520;
 }
+
 .viz-background {
-  position: relative;
-  min-height: 100vh;       /* full height of screen */
-  display: flex;
-  justify-content: center; /* center horizontally */
-  align-items: center;     /* center vertically */
-  background: radial-gradient(circle at center, #0a0a0a, #000000);
-  overflow: hidden;
-  font-family: 'Cinzel', serif; /* medieval vibe */
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #0a0a0a, #000000);
+    overflow: hidden;
+    font-family: 'Cinzel', serif;
 }
 
-/* fire particle animations */
-.fire-particle {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #ff4500;
-  border-radius: 50%;
-  animation: rise 4s infinite ease-in;
-  opacity: 0.7;
-}
-
-@keyframes rise {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(-600px) scale(0.3);
-    opacity: 0;
-  }
-}
-
-/* container box */
 .auth-container {
-  background: rgba(20, 20, 20, 0.9);
-  padding: 40px;
-  border: 2px solid #DAA520; /* golden border */
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 0 30px rgba(218, 165, 32, 0.5);
-  z-index: 10; /* above particles */
+    background: rgba(20, 20, 20, 0.9);
+    padding: 40px;
+    border: 2px solid #DAA520; /* golden border */
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(218, 165, 32, 0.5);
+    z-index: 10; /* above particles */
+}
+.back-btn {
+    background: #DAA520; /* brown background */
+    border: none; /* no border */
+    color: white; /* text color */
+    font-size: 18px; /* font size */
+    font-weight: bold; /* bold text */
+    cursor: pointer; /* pointer on hover */
+    padding: 12px 24px; /* spacing */
+    border-radius: 10px; /* rounded corners */
+    transition: box-shadow 0.3s ease, text-shadow 0.3s ease;
 }
